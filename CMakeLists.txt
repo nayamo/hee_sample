@@ -49,6 +49,9 @@ set(EXPLIB_SRC_DIR ${EXPLIB_DIR}/Sources)
 set(EXPLIB_INC_DIR ${EXPLIB_DIR}/Headers)
 set(EXPLIB_PUBINC_DIR ${EXPLIB_DIR}/PublicHeaders)
 
+set(EFIF_PUBINC_DIR "/home/centos/git/e4/lib/efif/include/public")
+set(EFIF_LIB_DIR "/home/centos/git/e4/build")
+
 # ソースとヘッダーが同じディレクトリにある
 set(DISPLINE_DIR ${EXP_SRC_DIR}/line_tt)
 
@@ -65,6 +68,8 @@ INCLUDE_DIRECTORIES("${EXPLIB_INC_DIR}")
 INCLUDE_DIRECTORIES("${EXPLIB_PUBINC_DIR}")
 
 INCLUDE_DIRECTORIES("${DISPLINE_DIR}")
+
+INCLUDE_DIRECTORIES("${EFIF_PUBINC_DIR}")
 
 
 # ライブラリ別にソースファイル登録
@@ -89,6 +94,11 @@ add_library(displine ${LINK_TYPE}
 add_library(exp ${LINK_TYPE}
   ${EXPLIB_SRC}
 )
+
+target_link_libraries(exp
+  e4
+)
+
 
 add_executable(sample
   ./sample.cpp
