@@ -49,7 +49,7 @@ set(EXPLIB_SRC_DIR ${EXPLIB_DIR}/Sources)
 set(EXPLIB_INC_DIR ${EXPLIB_DIR}/Headers)
 set(EXPLIB_PUBINC_DIR ${EXPLIB_DIR}/PublicHeaders)
 
-set(EFIF_PUBINC_DIR "/home/centos/git/e4/lib/efif/include/public")
+set(EFIF_PUBINC_DIR "/home/centos/git/e4/lib/efif/include/efif/public")
 set(EFIF_LIB_DIR "/home/centos/git/e4/build")
 
 # ソースとヘッダーが同じディレクトリにある
