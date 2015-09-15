@@ -65,6 +65,8 @@ void output_result(ExpRouteResHandler searchResult) {
 int main() {
     ExpDiaDBHandler diadb_h = diadb_load();
     ExpDataHandler db_handler = data_load(diadb_h);
+    // 表示線区情報
+    ExpDLineData_Initiate(db_handler, diadb_h, "data/displine/dlinemst.dat", "data/displine/ptn_match.dat", ExpErr *err);
 
     // 探索
     ExpErr err;
