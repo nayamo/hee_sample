@@ -70,7 +70,6 @@ int main() {
     ExpDLineData_Initiate(db_handler, diadb_h, "data/displine/dlinemst.dat", "data/displine/ptn_match.dat", &err);
 
     // 探索
-    ExpErr err;
     ExpNaviHandler   navi_handler   = ExpNavi_NewHandler(db_handler, &err);
     ExpStationCode code1;
     ExpStationCode code2;
