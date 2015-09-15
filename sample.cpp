@@ -66,7 +66,8 @@ int main() {
     ExpDiaDBHandler diadb_h = diadb_load();
     ExpDataHandler db_handler = data_load(diadb_h);
     // 表示線区情報
-    ExpDLineData_Initiate(db_handler, diadb_h, "data/displine/dlinemst.dat", "data/displine/ptn_match.dat", ExpErr *err);
+    ExpErr err;
+    ExpDLineData_Initiate(db_handler, diadb_h, "data/displine/dlinemst.dat", "data/displine/ptn_match.dat", &err);
 
     // 探索
     ExpErr err;
