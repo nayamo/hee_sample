@@ -2,6 +2,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/foreach.hpp>
 #include "ExpPublic.h"
+#include "ExpDispLine.h"
 
 namespace fs = boost::filesystem;
 
